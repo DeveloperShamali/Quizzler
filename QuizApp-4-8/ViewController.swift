@@ -11,11 +11,14 @@ import UIKit
 class ViewController: UIViewController {
     
     var questionNumber = 0
+    var score = 0
 
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var trueButton: UIButton!
     @IBOutlet weak var falseButton: UIButton!
+    @IBOutlet weak var progressBar: UIProgressView!
+    
     
     
    let quiz =  [Question(q: "A slug's blood is green.", a: "True"),
@@ -34,7 +37,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-       updateUI()
+        trueButton.layer.cornerRadius = trueButton.frame.height / 2
+        falseButton.layer.cornerRadius = falseButton.frame.height / 2
+       
+        updateUI()
     }
 
     @IBAction func buttonPressed(_ sender: UIButton) {
@@ -60,19 +66,31 @@ class ViewController: UIViewController {
             questionNumber += 1
         } else {
             questionNumber = 0
+            score = 0
         }
     }
     
     func checkAnswer(userAnswer: String) -> Bool {
         if userAnswer == quiz[questionNumber].answer {
+            score += 1
             return true
         } else {
             return false
         }
     }
     
+    func setProgressBar() -> Float {
+        return Float(questionNumber) / Float(quiz.count)
+    }
+    
+    func getScore() -> Int {
+        return score
+    }
+    
     @objc func updateUI() {
         questionLabel.text = getQuestionText()
+        progressBar.progress = setProgressBar()
+        scoreLabel.text = "Score \(getScore())"
         
         trueButton.backgroundColor = UIColor.clear
         falseButton.backgroundColor = UIColor.clear
