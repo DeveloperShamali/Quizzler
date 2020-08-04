@@ -14,6 +14,7 @@
 		5F29589524D95FED00EF67E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F29589424D95FED00EF67E2 /* Assets.xcassets */; };
 		5F29589824D95FED00EF67E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F29589624D95FED00EF67E2 /* LaunchScreen.storyboard */; };
 		5F2958A024D9616700EF67E2 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F29589F24D9616700EF67E2 /* Question.swift */; };
+		5F2958A224D98F1200EF67E2 /* QuizHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2958A124D98F1200EF67E2 /* QuizHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5F29589724D95FED00EF67E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F29589924D95FED00EF67E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F29589F24D9616700EF67E2 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		5F2958A124D98F1200EF67E2 /* QuizHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				5F29589624D95FED00EF67E2 /* LaunchScreen.storyboard */,
 				5F29589924D95FED00EF67E2 /* Info.plist */,
 				5F29589F24D9616700EF67E2 /* Question.swift */,
+				5F2958A124D98F1200EF67E2 /* QuizHandler.swift */,
 			);
 			path = "QuizApp-4-8";
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F2958A224D98F1200EF67E2 /* QuizHandler.swift in Sources */,
 				5F29589024D95FEB00EF67E2 /* ViewController.swift in Sources */,
 				5F2958A024D9616700EF67E2 /* Question.swift in Sources */,
 				5F29588C24D95FEB00EF67E2 /* AppDelegate.swift in Sources */,
