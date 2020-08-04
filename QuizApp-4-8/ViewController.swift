@@ -56,7 +56,7 @@ class ViewController: UIViewController {
     }
     
     func nextQuestion()  {
-        if questionNumber + 1 <= quiz.count {
+        if questionNumber + 1 < quiz.count {
             questionNumber += 1
         } else {
             questionNumber = 0
